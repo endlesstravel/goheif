@@ -416,7 +416,7 @@ int  decode_CABAC_TR_bypass(CABAC_decoder* decoder, int cRiceParam, int cTRMax)
 }
 
 
-#define MAX_PREFIX 32
+#define MAX_PREFIX_32 32
 
 int  decode_CABAC_EGk_bypass(CABAC_decoder* decoder, int k)
 {
@@ -433,7 +433,7 @@ int  decode_CABAC_EGk_bypass(CABAC_decoder* decoder, int k)
         n++;
       }
 
-      if (n == k+MAX_PREFIX) {
+      if (n == k+MAX_PREFIX_32) {
         return 0; // TODO: error
       }
     }
